@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Farmacia</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div th:replace="~{layout/plantilla :: header}"></div>
+
+        <div class="container mt-5">
+            <h1 class="text-center">Bienvenido a nuestra Farmacia</h1>
+            <p class="lead text-center">En nuestra farmacia, nos dedicamos a proporcionar una atención excepcional y una amplia gama de medicamentos y productos de salud. Nuestro objetivo es garantizar el bienestar de nuestros clientes a través de un servicio personalizado y productos de calidad.</p>
+
+            <h2 class="mt-4">Productos Disponibles</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Medicamentos recetados</li>
+                <li class="list-group-item">Medicamentos de venta libre</li>
+                <li class="list-group-item">Suplementos vitamínicos</li>
+                <li class="list-group-item">Productos de cuidado personal</li>
+                <li class="list-group-item">Asesoramiento farmacéutico</li>
+            </ul>
+
+            <h2 class="mt-4 text-center">Video Informativo sobre el Medicamento "Paracetamol"</h2>
+            <div class="text-center mb-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B3lklTZwHW8" 
+                        title="Video sobre el Paracetamol" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div th:replace="~{layout/plantilla :: footer}"></div>
+    </body>
+</html>

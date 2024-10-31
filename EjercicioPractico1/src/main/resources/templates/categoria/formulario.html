@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Farmacia</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div th:replace="~{layout/plantilla :: header}"></div>
+    <h2>Formulario de Satisfacción</h2>
+    <form action="/farmacia/enviar-satisfaccion" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="puntuacion">Puntuación:</label>
+        <input type="number" id="puntuacion" name="puntuacion" min="1" max="5" required>
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+ <div th:replace="~{layout/plantilla :: footer}"></div>
+    </body>
+</html>
